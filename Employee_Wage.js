@@ -2,11 +2,11 @@ var msg = "Welcome to employee wage computation program";
 console.log(msg);
 
 //Constants
-let IS_PART_TIME = 1;
-let IS_FULL_TIME = 2;
-let EMP_RATE_PER_HOUR = 20;
-let MAX_WORKING_DAYS = 20;
-let MAX_HRS_IN_MONTH = 10;
+const IS_PART_TIME = 1;
+const IS_FULL_TIME = 2;
+const EMP_RATE_PER_HOUR = 20;
+const MAX_WORKING_DAYS = 20;
+const MAX_HRS_IN_MONTH = 10;
 
 //Variables
 let empHrs = 0;
@@ -50,3 +50,4 @@ totalEmpWage = calculateWage(totalEmpHrs);
 console.log(totalEmpWage);
 
 console.log(dailyWage);
+console.log(empDailyWage);
