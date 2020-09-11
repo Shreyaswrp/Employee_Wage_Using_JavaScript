@@ -29,20 +29,17 @@ function getWorkHours(empCheck) {
   return empHrs;
 }
 
-function getDailyWage(empHrs){
+function calculateWage(empHrs){
     return empHrs * EMP_RATE_PER_HOUR;
 }
 
-while (
-  totalEmpHrs <= MAX_HRS_IN_MONTH &&
-  totalWorkingDays <= MAX_WORKING_DAYS
-) {
+while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays <= MAX_WORKING_DAYS) {
   totalWorkingDays++;
   let empCheck = Math.floor(Math.random() * 3);
   empHrs = getWorkHours(empCheck);
   totalEmpHrs += empHrs;
-  empDailyWage.push(getDailyWage(empHrs));
+  empDailyWage.push(calculateWage(empHrs));
 }
 
-totalEmpWage = getDailyWage(totalEmpHrs);
+totalEmpWage = calculateWage(totalEmpHrs);
 console.log(totalEmpWage);
